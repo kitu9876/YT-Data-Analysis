@@ -5,7 +5,7 @@ from vars import KEY
 from mongo_operation import MongoOperation
 
 
-app= Flask(__name__)
+application= Flask(__name__)
 channel_ids = ['UCNU_lfiiWBdtULKOw6X0Dig', 'UCb1GdqUqArXMQ3RS86lqqOw', 'UCDrf0V4fcBr5FlCtKwvpfwA']
 mo = MongoOperation()
 ytu = YT()
