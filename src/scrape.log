@@ -1,0 +1,200 @@
+29/08/2023 05:48:33 PM INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.35:5000
+29/08/2023 05:48:33 PM INFO:[33mPress CTRL+C to quit[0m
+29/08/2023 05:51:04 PM INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.35:5000
+29/08/2023 05:51:04 PM INFO:[33mPress CTRL+C to quit[0m
+29/08/2023 05:51:18 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 05:51:18 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCNU_lfiiWBdtULKOw6X0Dig&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 05:51:18 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 05:51:18 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCb1GdqUqArXMQ3RS86lqqOw&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 05:51:18 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 05:51:19 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCDrf0V4fcBr5FlCtKwvpfwA&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 05:51:19 PM ERROR:bad auth : Authentication failed., full error: {'ok': 0, 'errmsg': 'bad auth : Authentication failed.', 'code': 8000, 'codeName': 'AtlasError'}
+29/08/2023 05:51:19 PM ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 21, in home
+    return render_template("index.html", channels=channels)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+29/08/2023 05:51:19 PM INFO:127.0.0.1 - - [29/Aug/2023 17:51:19] "[35m[1mGET / HTTP/1.1[0m" 500 -
+29/08/2023 05:51:19 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 05:51:19 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCNU_lfiiWBdtULKOw6X0Dig&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 05:51:20 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 05:51:20 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCb1GdqUqArXMQ3RS86lqqOw&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 05:51:20 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 05:51:20 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCDrf0V4fcBr5FlCtKwvpfwA&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 05:51:20 PM ERROR:bad auth : Authentication failed., full error: {'ok': 0, 'errmsg': 'bad auth : Authentication failed.', 'code': 8000, 'codeName': 'AtlasError'}
+29/08/2023 05:51:20 PM ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 21, in home
+    return render_template("index.html", channels=channels)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+29/08/2023 05:51:20 PM INFO:127.0.0.1 - - [29/Aug/2023 17:51:20] "[35m[1mGET / HTTP/1.1[0m" 500 -
+29/08/2023 05:56:09 PM INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+29/08/2023 05:56:09 PM INFO:[33mPress CTRL+C to quit[0m
+29/08/2023 05:56:09 PM INFO: * Restarting with stat
+29/08/2023 05:56:10 PM WARNING: * Debugger is active!
+29/08/2023 05:56:10 PM INFO: * Debugger PIN: 839-372-476
+29/08/2023 05:56:23 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 05:56:24 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCNU_lfiiWBdtULKOw6X0Dig&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 05:56:24 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 05:56:24 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCb1GdqUqArXMQ3RS86lqqOw&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 05:56:24 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 05:56:24 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCDrf0V4fcBr5FlCtKwvpfwA&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 05:56:25 PM ERROR:bad auth : Authentication failed., full error: {'ok': 0, 'errmsg': 'bad auth : Authentication failed.', 'code': 8000, 'codeName': 'AtlasError'}
+29/08/2023 05:56:25 PM INFO:127.0.0.1 - - [29/Aug/2023 17:56:25] "[35m[1mGET / HTTP/1.1[0m" 500 -
+29/08/2023 05:56:25 PM INFO:127.0.0.1 - - [29/Aug/2023 17:56:25] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+29/08/2023 05:56:25 PM INFO:127.0.0.1 - - [29/Aug/2023 17:56:25] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+29/08/2023 05:56:25 PM INFO:127.0.0.1 - - [29/Aug/2023 17:56:25] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+29/08/2023 05:56:26 PM INFO:127.0.0.1 - - [29/Aug/2023 17:56:26] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+29/08/2023 06:28:51 PM INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+29/08/2023 06:28:51 PM INFO:[33mPress CTRL+C to quit[0m
+29/08/2023 06:28:51 PM INFO: * Restarting with stat
+29/08/2023 06:28:53 PM WARNING: * Debugger is active!
+29/08/2023 06:28:53 PM INFO: * Debugger PIN: 839-372-476
+29/08/2023 06:29:15 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 06:29:15 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCNU_lfiiWBdtULKOw6X0Dig&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 06:29:15 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 06:29:16 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCb1GdqUqArXMQ3RS86lqqOw&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 06:29:16 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 06:29:16 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCDrf0V4fcBr5FlCtKwvpfwA&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 06:29:16 PM ERROR:bad auth : Authentication failed., full error: {'ok': 0, 'errmsg': 'bad auth : Authentication failed.', 'code': 8000, 'codeName': 'AtlasError'}
+29/08/2023 06:29:16 PM INFO:127.0.0.1 - - [29/Aug/2023 18:29:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+29/08/2023 06:29:16 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 06:29:17 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCNU_lfiiWBdtULKOw6X0Dig&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 06:29:17 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 06:29:17 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCb1GdqUqArXMQ3RS86lqqOw&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 06:29:17 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 06:29:17 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCDrf0V4fcBr5FlCtKwvpfwA&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 06:29:18 PM ERROR:bad auth : Authentication failed., full error: {'ok': 0, 'errmsg': 'bad auth : Authentication failed.', 'code': 8000, 'codeName': 'AtlasError'}
+29/08/2023 06:29:18 PM INFO:127.0.0.1 - - [29/Aug/2023 18:29:18] "[35m[1mGET / HTTP/1.1[0m" 500 -
+29/08/2023 06:29:18 PM INFO:127.0.0.1 - - [29/Aug/2023 18:29:18] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+29/08/2023 06:29:18 PM INFO:127.0.0.1 - - [29/Aug/2023 18:29:18] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+29/08/2023 06:29:19 PM INFO:127.0.0.1 - - [29/Aug/2023 18:29:19] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+29/08/2023 06:29:37 PM INFO: * Detected change in 'D:\\Ineuron downloads\\Python-Projects\\Youtube-Scrapper\\src\\app.py', reloading
+29/08/2023 06:29:38 PM INFO: * Restarting with stat
+29/08/2023 06:29:54 PM INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.35:5000
+29/08/2023 06:29:54 PM INFO:[33mPress CTRL+C to quit[0m
+29/08/2023 06:30:01 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 06:30:01 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCNU_lfiiWBdtULKOw6X0Dig&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 06:30:01 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 06:30:02 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCb1GdqUqArXMQ3RS86lqqOw&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 06:30:02 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 06:30:02 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCDrf0V4fcBr5FlCtKwvpfwA&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 06:30:02 PM ERROR:bad auth : Authentication failed., full error: {'ok': 0, 'errmsg': 'bad auth : Authentication failed.', 'code': 8000, 'codeName': 'AtlasError'}
+29/08/2023 06:30:02 PM ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 21, in home
+    return render_template("index.html", channels=channels)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+29/08/2023 06:30:02 PM INFO:127.0.0.1 - - [29/Aug/2023 18:30:02] "[35m[1mGET / HTTP/1.1[0m" 500 -
+29/08/2023 06:30:03 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 06:30:03 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCNU_lfiiWBdtULKOw6X0Dig&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 06:30:03 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 06:30:03 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCb1GdqUqArXMQ3RS86lqqOw&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 06:30:03 PM DEBUG:Starting new HTTPS connection (1): youtube.googleapis.com:443
+29/08/2023 06:30:04 PM DEBUG:https://youtube.googleapis.com:443 "GET /youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UCDrf0V4fcBr5FlCtKwvpfwA&key=AIzaSyDQIraxqJJc5thqiZ8zAePEfnVYSxPkJWE HTTP/1.1" 200 None
+29/08/2023 06:30:04 PM ERROR:bad auth : Authentication failed., full error: {'ok': 0, 'errmsg': 'bad auth : Authentication failed.', 'code': 8000, 'codeName': 'AtlasError'}
+29/08/2023 06:30:04 PM ERROR:Exception on / [GET]
+Traceback (most recent call last):
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 21, in home
+    return render_template("index.html", channels=channels)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "D:\Ineuron downloads\Python-Projects\Youtube-Scrapper\venv\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+29/08/2023 06:30:04 PM INFO:127.0.0.1 - - [29/Aug/2023 18:30:04] "[35m[1mGET / HTTP/1.1[0m" 500 -

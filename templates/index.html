@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>YouTube Video Details</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}">
+        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+
     </head>
     <body class="bg-dark">
         <section id="container" class="bg-dark ">
@@ -14,7 +16,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 mx-auto mb-3">
-                        <form action="/scrap" method="post">
+                        <form action="/find" method="post">
                             <div class="input-group mb-3">
                                 <input type="text" name="url" class="form-control" placeholder="Enter a YouTube Video URL" aria-label="URL or ID" aria-describedby="basic-addon2">
                                 <input type="submit" class="input-group-text btn btn-warning" value="Fetch">

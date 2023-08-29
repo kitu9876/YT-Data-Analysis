@@ -1,28 +1,59 @@
-from flask import Flask , render_template , request , jsonify
-from flask_cors import CORS , cross_origin
-from urllib.request import urlopen as uReq
-from bs4 import BeautifulSoup as bs
+from flask import Flask , render_template , request , send_file
 import requests
-import os
-import logging
+from ytutils import YT
+from vars import KEY
+from mongo_operation import MongoOperation
 
-from scrapper import get_channel_stats,get_video_ids,get_video_details
-
-logging.basicConfig(filename="scrapper.log" , level=logging.INFO)
 
 app= Flask(__name__)
-@app.route("/", methods =['GET'])
-def homepage(self,_video_url):
+channel_ids = ['UCNU_lfiiWBdtULKOw6X0Dig', 'UCb1GdqUqArXMQ3RS86lqqOw', 'UCDrf0V4fcBr5FlCtKwvpfwA']
+mo = MongoOperation()
+ytu = YT()
 
-    return render_template("index.html")
+@app.route("/")
+def home():
+    channels = []
+   
+    for id in channel_ids:
+        channel = ytu.get_channel_details(id)
+        channels.append(channel)
+    mo.save_channels(channels)
+    return render_template("index.html", channels=channels)
 
-@app.route("/scrap",methods=['POST'])
-def scrap():
-  if request.method=='POST':
-    searchUrl= request.form['url']
-    video_id = searchUrl.split("=")[-1]
+@app.route("/find", methods=('POST',))
+def find():
+    if request.method == "POST":
+       url = request.form.get("url")
+       video_id = url.split("=")[-1]
+       video_details = mo.get_video_details(video_id)
+       if video_details is None:
+        video_details = ytu.get_video_details(video_id)
+        if video_details is not None:
+            mo.save_video(video_details)
+        else:
+            video_details = False
+       
+    return render_template("video_details.html", video=video_details)
 
-    
+
+
+#@app.route("/", methods =['GET'])
+#def homepage():
+ # channel_details = ytu.get_channel_stats(youtube,channel_ids)
+  #return render_template("index.html", channel_details)
+
+
+if __name__=="__main__":
+    app.run(host="0.0.0.0", port=5000)
+'''
+if __name__ == '__main__':
+    app.debug = True
+    app.run()
+'''
+
+
+
+
 
 
 
